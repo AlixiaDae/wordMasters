@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    font-family: 'Open Sans';
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+h1 {
+    margin: 0;
+    font-size: 40px;
+}
+
+img {
+    height: 60px;
+    margin: 0;
+    animation: spin 1.5s infinite;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-rows: repeat(6,1fr);
+    row-gap: 5px;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.word {
+    display: flex;
+    gap: 5px;
+}
+
+.letter {
+    height: 90px;
+    width: 90px;
+    border: 3px solid rgb(180, 179, 179);
+    font-size: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.correct {
+    background-color: rgb(26, 145, 26);
+    color: whitesmoke;
+}
+
+.close {
+    background-color: goldenrod;
+    color: whitesmoke;
+}
+
+.wrong {
+    background-color: grey;
+    color: whitesmoke;
+}
